@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/splash_blue"
+        tools:context=".activities.SplashActivity">
+
+
+        <ImageView
+            android:id="@+id/splash_img"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_app_name"
+            android:background="@drawable/splash_icon"
+
+            ></ImageView>
+
+        <ImageView
+            android:id="@+id/tv_app_name"
+            android:layout_width="183dp"
+            android:layout_height="80dp"
+            android:background="@drawable/blood_sugar_tracker"
+            app:layout_constraintBottom_toTopOf="@+id/btn_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_img"></ImageView>
+
+
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:textAllCaps="false"
+            android:background="@drawable/ic_button_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            ></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

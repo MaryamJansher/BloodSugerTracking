@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color">
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/main_constraints"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/ic_statistics_rectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            >
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+
+            android:id="@+id/et_measurementtime"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="Measurements"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/v_measurementtime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_constraints">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/v_measurementtime"
+            android:layout_width="18.3dp"
+            android:layout_height="10.4dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/et_measurementtime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_measurementtime"></Button>
+
+        <View
+
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/v_measurementtime"
+            app:layout_constraintStart_toStartOf="@id/et_measurementtime"
+            app:layout_constraintTop_toBottomOf="@+id/et_measurementtime"
+
+            ></View>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:background="@drawable/tracking_rec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Label"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/et_label"
+            app:layout_constraintBottom_toTopOf="@+id/tv_date"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+
+
+
+    <EditText
+        android:id="@+id/et_label"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/tv_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"></EditText>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/et_label"
+            app:layout_constraintEnd_toEndOf="@+id/et_label"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label"
+            android:background="@drawable/line_1"></View>
+
+
+        <TextView
+
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_measurement"
+            app:layout_constraintStart_toStartOf="@id/tv_label"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_label"></TextView>
+
+
+        <TextView
+            android:id="@+id/et_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_date"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_date"
+
+            ></TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/et_date"
+            app:layout_constraintEnd_toEndOf="@+id/et_date"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_date"
+            android:background="@drawable/line_1"></View>
+
+
+
+        <TextView
+
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_date"
+            app:layout_constraintStart_toEndOf="@+id/et_date"></TextView>
+
+        <TextView
+            android:id="@+id/et_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/tv_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            ></TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/et_time"
+            app:layout_constraintEnd_toEndOf="@+id/et_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+            android:background="@drawable/line_1"></View>
+
+
+        <TextView
+
+            android:id="@+id/tv_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measurement"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@id/tv_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"></TextView>
+
+
+        <TextView
+            android:id="@+id/et_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before meal"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/tv_measurement"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_measurement"
+            app:layout_constraintEnd_toEndOf="parent"
+           ></TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+           app:layout_constraintStart_toEndOf="@+id/tv_measurement"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_measurement"
+            android:background="@drawable/line_1"></View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+
+        android:id="@+id/iv_bars"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_no_bars"
+        app:layout_constraintBottom_toTopOf="@+id/rv_horizontal_picker"
+        app:layout_constraintTop_toBottomOf="@+id/main_layout"
+        ></ImageView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_horizontal_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/iv_bars"
+
+        />
+
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_btn_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker"
+       >
+
+
+    </Button>
+
+
+    <androidx.leanback.widget.picker.TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:timePickerMode="spinner"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
